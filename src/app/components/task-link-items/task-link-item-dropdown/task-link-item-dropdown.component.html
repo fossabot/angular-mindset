@@ -1,6 +1,15 @@
 <div class="task-link-item-dropdown-wrapper">
-  <div class="task-link-item-dropdown" (click)="toggleDropdown()">#empty# <app-help-icon>angle-down</app-help-icon></div>
-  <div class="task-link-item-dropdown-menu" [ngClass]="{'task-link-item-dropdown-menu--visible': this.flagDropdown}">
-    <div>Text</div>
+  <div *ngIf="values && values.length > 0 else empty" class="task-link-item-dropdown" (click)="toggleDropdown()">
+    <span class="task-link-item-dropdown-helper" *ngIf="!selection">{{ hint }}</span>
+    <app-help-icon>angle-down</app-help-icon>
   </div>
+  <div *ngIf="showDropdown" class="task-link-item-dropdown-menu" @dropdown>
+    <ng-container *ngFor="let value of values">
+      <app-task-link-item-content (click)="emitClickedIndex(value)">{{ value }}</app-task-link-item-content>
+    </ng-container>
+  </div>
+
+  <ng-template #empty>
+    <app-task-link-item-content>#</app-task-link-item-content>
+  </ng-template>
 </div>

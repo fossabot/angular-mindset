@@ -7,6 +7,11 @@
   flex-direction: row;
   padding: 0.25em;
   border: 2px solid #94c0c2;
+  cursor: pointer;
+}
+
+.task-link-item-dropdown-helper {
+  color: #94c0c2;
 }
 
 .task-link-item-dropdown app-help-icon {
@@ -15,15 +20,10 @@
 }
 
 .task-link-item-dropdown-menu {
+  overflow: hidden;
   position: absolute;
-  padding: 0.25em;
   border: 2px solid #94c0c2;
-  visibility: hidden;
   left: 0;
   margin-top: 4px;
   width: 100%;
-}
-
-.task-link-item-dropdown-menu--visible {
-  visibility: visible;
 }
