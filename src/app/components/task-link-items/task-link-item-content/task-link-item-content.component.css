@@ -1,4 +1,9 @@
 .task-link-item-content {
   padding: 0.25em;
   border: 1px solid #94c0c2;
+  cursor: pointer;
+}
+
+.task-link-item-content:hover {
+  background-color: #dae4e5;
 }
