@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -15,13 +16,14 @@ import { TaskLinkItemContentComponent } from './components/task-link-items/task-
   declarations: [
     AppComponent,
     FrameComponent,
+    HelpIconComponent,
     TaskLinkComponent,
     TaskLinkItemDropdownComponent,
-    HelpIconComponent,
     TaskLinkItemContentComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule
   ],
   providers: [
